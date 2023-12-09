@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+</head>
+<body>
+<script>
+ const calculate = {
+    Add: function (m, n) {
+        return m + n; },
+    Subtract: function (m, n){
+        return m - n; },
+    Multiply: function (m, n){
+        return m * n; },
+    Divide: function (m,  n){
+        try {
+            if (n === 0) {
+                throw new Error ("Division by zero is not allowed") }
+            return m / n;
+        } catch (error) {
+            console.error(error.message) }
+        },
+    };
+ console.log ("Addition:" + calculate.Add(1, 2));
+ console.log ("Subtraction:" + calculate.Subtract(45, 5));
+ console.log ("Multiplication:" + calculate.Multiply(8, 4));
+ calculate.Divide(60, 0);
+</script>
+    </body>
+</html>
